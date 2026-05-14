@@ -3,7 +3,7 @@
     "short_name":"my app",
     "description":"app for calculating profit",
     "start_url":"index.html",
-    id:"/?homescreen==1",
+   " id":"/?homescreen==1",
     "display":"standalone",
     "dir":"auto",
     "scope":"index.html",

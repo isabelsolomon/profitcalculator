@@ -41,6 +41,7 @@ function calculateproduct(product,fullsell,fullcost,halfsell,halfcost,quartersel
   function clearrecords(){
     localStorage.removeItem("profits");
     document.getElementById("history").innerHTML ="";
+      
   }
   function clearinputs(){
     let inputs=document.querySelectorAll("input");

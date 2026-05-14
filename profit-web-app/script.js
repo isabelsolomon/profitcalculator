@@ -20,7 +20,7 @@ function calculateproduct(product,fullsell,fullcost,halfsell,halfcost,quartersel
   function saverecord(){
     let total=document.getElementById("grandtotal").innerText;
     let date=new Date().toLocaleDateString();
-    let record=date + "- "+ total;
+    let record={date:date,total:total};
     let records=JSON.parse(localStorage.getItem("profits")) || [];
     records.push(record);
     localStorage.setItem("profits",JSON.stringify(records));
@@ -30,9 +30,12 @@ function calculateproduct(product,fullsell,fullcost,halfsell,halfcost,quartersel
     let history=document.getElementById("history");
     let records=JSON.parse(localStorage.getItem("profits")) || [];
     history.innerHTML="";
+      let totalsaved=0;
     records.forEach(record =>{
-        history.innerHTML+= "<p>" + record + "</p>";
+        history.innerHTML+= "<p>" + record.date +"-"+ record.total+ "</p>";
+        totalsaved+=Number(record.total);
     });
+      document.getElementById("savedtotal").innerText=totalsaved;
   }
   displayrecords();
   function clearrecords(){

@@ -1,6 +1,7 @@
 {
     "name":"PROFIT CALCULATOR",
     "short_name":"my app",
+    "description":"app for calculating profit",
     "start_url":"index.html",
     "display":"standalone",
     "background_color":"#ffffff",

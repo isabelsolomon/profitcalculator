@@ -226,5 +226,10 @@
     <h2> TOTAL SAVED PROFITS:<span id="savedtotal">0</span></h2>
     <script src="script.js"></script>
     <script src="app.js"></script>
+    <script>
+  if (typeof navigator.serviceWorker !== 'undefined') {
+    navigator.serviceWorker.register('sw.js')
+  }
+</script>
 </body>
 </html>

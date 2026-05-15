@@ -1,7 +1,7 @@
 console.log("app.js loaded");
 if("serviceWorker"in navigator){
     console.log("service worker supported");
-    navigator.serviceWorker.register("./sw.js")
+    navigator.serviceWorker.register("/profitcalculator/sw.js")
     .then((reg) => {console.log("sw registered",reg);})
     .catch(err=>{ console.log("sw failed",err);});
 }else{
